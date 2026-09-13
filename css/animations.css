@@ -1,0 +1,45 @@
+/* ===========================================================
+   CODE WITH JAVA — Animations
+   Restrained: one hero entrance, one floating visual, hover states.
+   Respects prefers-reduced-motion (handled in style.css).
+   =========================================================== */
+
+@keyframes javaHeroFloat {
+  0%, 100% { transform: perspective(1200px) rotateY(-2deg) rotateX(1deg) translateY(0); }
+  50% { transform: perspective(1200px) rotateY(-2deg) rotateX(1deg) translateY(-8px); }
+}
+.java-code-window { animation: javaHeroFloat 7s ease-in-out infinite; }
+.java-floating-jdk { animation: javaHeroFloat 6.5s ease-in-out infinite; animation-delay: .2s; }
+.java-floating-oop { animation: javaHeroFloat 7.5s ease-in-out infinite; animation-delay: .7s; }
+.java-floating-dsa { animation: javaHeroFloat 6.8s ease-in-out infinite; animation-delay: .45s; }
+.java-floating-spring { animation: javaHeroFloat 8s ease-in-out infinite; animation-delay: 1s; }
+.java-floating-collections { animation: javaHeroFloat 7.2s ease-in-out infinite; animation-delay: .9s; }
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-badge, .hero-heading, .hero-desc, .hero-actions, .hero-stats {
+  animation: fadeSlideUp 0.7s ease both;
+}
+.hero-heading { animation-delay: 0.06s; }
+.hero-desc { animation-delay: 0.12s; }
+.hero-actions { animation-delay: 0.18s; }
+.hero-stats { animation-delay: 0.24s; }
+
+@keyframes blinkCursor {
+  0%, 45% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.type-cursor { animation: blinkCursor 1s steps(1) infinite; }
+
+@keyframes ringDraw {
+  from { stroke-dashoffset: var(--ring-start, 251); }
+}
+.progress-ring-fill { animation: ringDraw 1s ease-out; }
+
+@keyframes countUp {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fact-num { animation: countUp 0.5s ease; }
