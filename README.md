@@ -8,7 +8,19 @@ HTML, CSS and JavaScript, so it deploys straight to GitHub Pages with no
 build step, backend, or database.
 
 ---
+---
 
+## 🌐 Live Demo
+
+<p align="center">
+  <a href="https://priyajitpaul4-cmyk.github.io/Code-with-Java/" target="_blank">
+    <img src="https://img.shields.io/badge/🚀%20Open%20Code%20with%20Java-Live%20Demo-0f5132?style=for-the-badge&logo=java&logoColor=white" alt="Open Code with Java Live Demo">
+  </a>
+</p>
+
+<p align="center">
+  <b>Learn • Practice • Build • Grow ☕</b>
+</p>
 ## ✨ Features
 
 - **50+ real Java programs** — each with source code, expected output, an
