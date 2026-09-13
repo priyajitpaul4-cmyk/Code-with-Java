@@ -9,7 +9,8 @@ Multiplies two 2D matrices and prints the resulting matrix.
 ```java
 public class Main {
     public static void main(String[] args) {
-        int[][] a = {{1, 2}, {3, 4}};
+        int[][] a = [1, 2]
+[3, 4];
         int[][] b = {{5, 6}, {7, 8}};
         int[][] result = new int[2][2];
 
