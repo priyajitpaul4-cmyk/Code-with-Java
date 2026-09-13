@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "Sum of Array Elements",
+    "difficulty": "Easy",
+    "topic": "Arrays",
+    "statement": "Write a Java program to calculate the sum of all elements in an integer array.",
+    "hint": "Loop through the array with a for-each loop and keep a running total.",
+    "solution": "public class Main {\n    public static void main(String[] args) {\n        int[] arr = {2, 4, 6, 8, 10};\n        int sum = 0;\n        for (int n : arr) sum += n;\n        System.out.println(\"Sum: \" + sum);\n    }\n}",
+    "output": "Sum: 30",
+    "file": "practice/problem-01.md"
+  },
+  {
+    "id": 2,
+    "title": "Count Vowels in a String",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "statement": "Write a Java program that counts the number of vowels in a given string.",
+    "hint": "Loop through each character and check if it matches a, e, i, o, or u (case-insensitive).",
+    "solution": "public class Main {\n    public static void main(String[] args) {\n        String text = \"Code with Java\";\n        int count = 0;\n        for (char c : text.toLowerCase().toCharArray()) {\n            if (\"aeiou\".indexOf(c) != -1) count++;\n        }\n        System.out.println(\"Vowels: \" + count);\n    }\n}",
+    "output": "Vowels: 4",
+    "file": "practice/problem-02.md"
+  },
+  {
+    "id": 3,
+    "title": "Second Largest in an Array",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "statement": "Find the second largest element in an array without sorting it.",
+    "hint": "Track both the largest and second largest as you scan the array once.",
+    "solution": "public class Main {\n    public static void main(String[] args) {\n        int[] arr = {12, 35, 1, 10, 34, 1};\n        int first = Integer.MIN_VALUE, second = Integer.MIN_VALUE;\n        for (int n : arr) {\n            if (n > first) { second = first; first = n; }\n            else if (n > second && n != first) { second = n; }\n        }\n        System.out.println(\"Second largest: \" + second);\n    }\n}",
+    "output": "Second largest: 34",
+    "file": "practice/problem-03.md"
+  },
+  {
+    "id": 4,
+    "title": "Check Balanced Parentheses",
+    "difficulty": "Medium",
+    "topic": "Data Structures",
+    "statement": "Write a program to check if a string of brackets is balanced, using a stack.",
+    "hint": "Push opening brackets onto a stack; pop and compare when you see a closing bracket.",
+    "solution": "import java.util.Stack;\n\npublic class Main {\n    public static void main(String[] args) {\n        String expr = \"{[()()]}\";\n        Stack<Character> stack = new Stack<>();\n        boolean balanced = true;\n        for (char c : expr.toCharArray()) {\n            if (c == '(' || c == '{' || c == '[') stack.push(c);\n            else {\n                if (stack.isEmpty()) { balanced = false; break; }\n                char top = stack.pop();\n                if ((c == ')' && top != '(') || (c == '}' && top != '{') || (c == ']' && top != '[')) {\n                    balanced = false; break;\n                }\n            }\n        }\n        System.out.println(balanced && stack.isEmpty() ? \"Balanced\" : \"Not Balanced\");\n    }\n}",
+    "output": "Balanced",
+    "file": "practice/problem-04.md"
+  },
+  {
+    "id": 5,
+    "title": "Find Missing Number",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "statement": "An array contains n-1 distinct numbers from 1 to n. Find the missing number.",
+    "hint": "Compare the expected sum of 1..n with the actual sum of the array.",
+    "solution": "public class Main {\n    public static void main(String[] args) {\n        int[] arr = {1, 2, 4, 5, 6};\n        int n = arr.length + 1;\n        int expectedSum = n * (n + 1) / 2;\n        int actualSum = 0;\n        for (int x : arr) actualSum += x;\n        System.out.println(\"Missing number: \" + (expectedSum - actualSum));\n    }\n}",
+    "output": "Missing number: 3",
+    "file": "practice/problem-05.md"
+  },
+  {
+    "id": 6,
+    "title": "Two Sum Problem",
+    "difficulty": "Medium",
+    "topic": "Collections",
+    "statement": "Given an array and a target, find two numbers that add up to the target.",
+    "hint": "Use a HashMap to store each number and its index while scanning once.",
+    "solution": "import java.util.HashMap;\nimport java.util.Map;\n\npublic class Main {\n    public static void main(String[] args) {\n        int[] arr = {2, 7, 11, 15};\n        int target = 9;\n        Map<Integer, Integer> seen = new HashMap<>();\n        for (int i = 0; i < arr.length; i++) {\n            int complement = target - arr[i];\n            if (seen.containsKey(complement)) {\n                System.out.println(\"Indices: \" + seen.get(complement) + \", \" + i);\n                return;\n            }\n            seen.put(arr[i], i);\n        }\n    }\n}",
+    "output": "Indices: 0, 1",
+    "file": "practice/problem-06.md"
+  },
+  {
+    "id": 7,
+    "title": "Merge Two Sorted Arrays",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "statement": "Merge two sorted arrays into a single sorted array.",
+    "hint": "Use two pointers, one for each array, and always take the smaller current element.",
+    "solution": "import java.util.Arrays;\n\npublic class Main {\n    public static void main(String[] args) {\n        int[] a = {1, 3, 5};\n        int[] b = {2, 4, 6};\n        int[] merged = new int[a.length + b.length];\n        int i = 0, j = 0, k = 0;\n        while (i < a.length && j < b.length) {\n            merged[k++] = (a[i] <= b[j]) ? a[i++] : b[j++];\n        }\n        while (i < a.length) merged[k++] = a[i++];\n        while (j < b.length) merged[k++] = b[j++];\n        System.out.println(Arrays.toString(merged));\n    }\n}",
+    "output": "[1, 2, 3, 4, 5, 6]",
+    "file": "practice/problem-07.md"
+  },
+  {
+    "id": 8,
+    "title": "Custom Exception for Validation",
+    "difficulty": "Hard",
+    "topic": "Exception Handling",
+    "statement": "Design a custom exception hierarchy to validate a user's age and email together.",
+    "hint": "Create one base exception and two subclasses for each validation rule.",
+    "solution": "class ValidationException extends Exception {\n    ValidationException(String msg) { super(msg); }\n}\nclass InvalidAgeException extends ValidationException {\n    InvalidAgeException(String msg) { super(msg); }\n}\nclass InvalidEmailException extends ValidationException {\n    InvalidEmailException(String msg) { super(msg); }\n}\n\npublic class Main {\n    static void validate(int age, String email) throws ValidationException {\n        if (age < 18) throw new InvalidAgeException(\"Age must be 18+\");\n        if (!email.contains(\"@\")) throw new InvalidEmailException(\"Invalid email format\");\n        System.out.println(\"Valid user\");\n    }\n\n    public static void main(String[] args) {\n        try {\n            validate(20, \"user_at_example.com\");\n        } catch (ValidationException e) {\n            System.out.println(\"Rejected: \" + e.getMessage());\n        }\n    }\n}",
+    "output": "Rejected: Invalid email format",
+    "file": "practice/problem-08.md"
+  },
+  {
+    "id": 9,
+    "title": "Thread-Safe Counter",
+    "difficulty": "Hard",
+    "topic": "Multithreading",
+    "statement": "Implement a counter that stays correct when incremented by multiple threads at once.",
+    "hint": "Synchronize the increment method, or use AtomicInteger.",
+    "solution": "import java.util.concurrent.atomic.AtomicInteger;\n\npublic class Main {\n    static AtomicInteger counter = new AtomicInteger(0);\n\n    public static void main(String[] args) throws InterruptedException {\n        Runnable task = () -> {\n            for (int i = 0; i < 1000; i++) counter.incrementAndGet();\n        };\n        Thread t1 = new Thread(task);\n        Thread t2 = new Thread(task);\n        t1.start(); t2.start();\n        t1.join(); t2.join();\n        System.out.println(\"Final count: \" + counter.get());\n    }\n}",
+    "output": "Final count: 2000",
+    "file": "practice/problem-09.md"
+  },
+  {
+    "id": 10,
+    "title": "Group Words by Length using Streams",
+    "difficulty": "Hard",
+    "topic": "Streams",
+    "statement": "Given a list of words, group them by their length using the Stream API.",
+    "hint": "Use Collectors.groupingBy with String::length as the classifier.",
+    "solution": "import java.util.List;\nimport java.util.Map;\nimport java.util.stream.Collectors;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> words = List.of(\"java\", \"code\", \"stream\", \"oop\", \"loop\");\n        Map<Integer, List<String>> grouped = words.stream()\n                .collect(Collectors.groupingBy(String::length));\n        System.out.println(grouped);\n    }\n}",
+    "output": "{3=[oop], 4=[java, code, loop], 6=[stream]}",
+    "file": "practice/problem-10.md"
+  }
+]

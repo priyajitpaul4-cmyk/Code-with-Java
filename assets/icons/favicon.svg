@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="hexGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d3123"/>
+      <stop offset="100%" stop-color="#062017"/>
+    </linearGradient>
+  </defs>
+
+  <!-- hexagon badge -->
+  <polygon points="32,3 58,17.5 58,46.5 32,61 6,46.5 6,17.5"
+           fill="url(#hexGrad)" stroke="#34e07a" stroke-width="2"/>
+
+  <!-- steam curls -->
+  <path d="M25 20c-2-2-2-4 0-6" fill="none" stroke="#a6e14c" stroke-width="2" stroke-linecap="round"/>
+  <path d="M32 20c-2-2-2-4 0-6" fill="none" stroke="#a6e14c" stroke-width="2" stroke-linecap="round"/>
+  <path d="M39 20c-2-2-2-4 0-6" fill="none" stroke="#a6e14c" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- cup rim -->
+  <rect x="19" y="25" width="22" height="4" rx="2" fill="#eefaf2"/>
+
+  <!-- cup body: straight sides, rounded bottom (two quadratic curves) -->
+  <path d="M20,29 L40,29 L40,39 Q40,47 30,47 Q20,47 20,39 Z" fill="#eefaf2"/>
+
+  <!-- cup handle -->
+  <path d="M40,33 C46,32 49,35 49,38.5 C49,42 46,44.5 40,43.5"
+        fill="none" stroke="#eefaf2" stroke-width="2.6" stroke-linecap="round"/>
+
+  <!-- coffee surface line just under the rim -->
+  <rect x="22" y="30.5" width="16" height="2.6" rx="1.3" fill="#0a271b"/>
+</svg>

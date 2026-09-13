@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code with Java — Learn, Practice, Build, Grow</title>
+<meta name="description" content="Master Java from basics to advanced with 50+ programs, practice problems, a 30-day study plan and interview prep.">
+<link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/responsive.css">
+<link rel="stylesheet" href="./css/animations.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="#home" class="brand">
+      <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
+        <polygon points="32,3 58,17.5 58,46.5 32,61 6,46.5 6,17.5" fill="#0a271b" stroke="#34e07a" stroke-width="2"/>
+        <path d="M25 20c-2-2-2-4 0-6" fill="none" stroke="#a6e14c" stroke-width="2" stroke-linecap="round"/>
+        <path d="M32 20c-2-2-2-4 0-6" fill="none" stroke="#a6e14c" stroke-width="2" stroke-linecap="round"/>
+        <path d="M39 20c-2-2-2-4 0-6" fill="none" stroke="#a6e14c" stroke-width="2" stroke-linecap="round"/>
+        <rect x="19" y="25" width="22" height="4" rx="2" fill="#eefaf2"/>
+        <path d="M20,29 L40,29 L40,39 Q40,47 30,47 Q20,47 20,39 Z" fill="#eefaf2"/>
+        <path d="M40,33 C46,32 49,35 49,38.5 C49,42 46,44.5 40,43.5" fill="none" stroke="#eefaf2" stroke-width="2.6" stroke-linecap="round"/>
+        <rect x="22" y="30.5" width="16" height="2.6" rx="1.3" fill="#0a271b"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">CODE WITH <span class="accent">JAVA</span></span>
+        <span class="brand-tagline">Learn • Practice • Build • Grow</span>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <div class="nav-item"><a class="nav-link" href="#home" data-section="home">Home</a></div>
+      <div class="nav-item dropdown">
+        <a class="nav-link" href="#programs" data-section="programs">Programs <span class="caret">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="#programs" data-scope="Beginner">Beginner</a>
+          <a href="#programs" data-scope="Intermediate">Intermediate</a>
+          <a href="#programs" data-scope="Advanced">Advanced</a>
+        </div>
+      </div>
+      <div class="nav-item"><a class="nav-link" href="#problems" data-section="problems">Problems</a></div>
+      <div class="nav-item"><a class="nav-link" href="#roadmap" data-section="roadmap">Roadmap</a></div>
+      <div class="nav-item"><a class="nav-link" href="#interview" data-section="interview">Interview</a></div>
+      <div class="nav-item"><a class="nav-link" href="#resources" data-section="resources">Resources</a></div>
+      <div class="nav-item"><a class="nav-link" href="#about" data-section="about">About</a></div>
+    </nav>
+
+    <div class="nav-actions">
+      <select class="lang-select" aria-label="Choose language">
+        <option value="en">🌐 English</option>
+        <option value="bn">বাংলা</option>
+        <option value="hi">हिन्दी</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+      </select>
+      <button class="theme-toggle" aria-label="Toggle dark and light mode" aria-pressed="false">
+        <span class="knob"></span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home">Home</a>
+    <details>
+      <summary>Programs <span>▾</span></summary>
+      <ul>
+        <li><a href="#programs">Beginner</a></li>
+        <li><a href="#programs">Intermediate</a></li>
+        <li><a href="#programs">Advanced</a></li>
+      </ul>
+    </details>
+    <a href="#problems">Problems</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#interview">Interview</a>
+    <a href="#resources">Resources</a>
+    <a href="#about">About</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="hero java-hero">
+    <div class="java-hero-orb java-hero-orb-one" aria-hidden="true"></div>
+    <div class="java-hero-orb java-hero-orb-two" aria-hidden="true"></div>
+    <div class="java-hero-grid container">
+
+      <div class="java-hero-content">
+        <span class="java-hero-badge">
+          <span class="java-hero-badge-dot" aria-hidden="true"></span>
+          Java Programming Learning Lab
+        </span>
+
+        <h1 class="java-hero-title">
+          Master <span>Java.</span><br>
+          Build the Future.
+        </h1>
+
+        <p class="java-hero-desc">
+          Learn Java from fundamentals to advanced programming through practical programs,
+          problem solving, projects and interview preparation.
+        </p>
+
+        <div class="java-hero-actions">
+          <a href="#roadmap" class="java-hero-btn java-hero-btn-primary">
+            Start Learning <span aria-hidden="true">→</span>
+          </a>
+          <a href="#programs" class="java-hero-btn java-hero-btn-secondary">
+            Explore Programs
+          </a>
+        </div>
+
+        <div class="java-hero-trust" aria-label="Learning platform highlights">
+          <div class="java-hero-trust-item">
+            <strong>50+</strong>
+            <span>Programs</span>
+          </div>
+          <div class="java-hero-trust-divider" aria-hidden="true"></div>
+          <div class="java-hero-trust-item">
+            <strong>30-Day</strong>
+            <span>Roadmap</span>
+          </div>
+          <div class="java-hero-trust-divider" aria-hidden="true"></div>
+          <div class="java-hero-trust-item">
+            <strong>Interview</strong>
+            <span>Ready</span>
+          </div>
+        </div>
+
+        <div class="java-hero-typing" aria-hidden="true">
+          <span class="java-hero-typing-dot"></span>
+          <span id="javaHeroTypingText">Code. Compile. Create.</span><span class="java-hero-caret">|</span>
+        </div>
+      </div>
+
+      <div class="java-hero-visual">
+        <div class="java-hero-grid-pattern" aria-hidden="true"></div>
+
+        <div class="java-hero-logo-stage">
+          <!-- Official Java Affinity logo. It must remain an active, unmodified link to dev.java. -->
+          <a
+            class="java-official-logo"
+            href="https://dev.java"
+            target="_blank"
+            rel="noopener"
+            aria-label="Official Java Affinity logo — visit dev.java"
+          >
+            <img
+              src="https://dev.java/assets/images/java-affinity-logo-icode-lg.png"
+              alt="Official Java Affinity Java coffee-cup logo"
+              width="320"
+              height="190"
+              loading="eager"
+              decoding="async"
+            >
+          </a>
+          <span class="java-logo-caption">Java ecosystem</span>
+        </div>
+
+        <div class="java-code-window" aria-label="Java code workspace">
+          <div class="java-code-header">
+            <div class="java-window-controls" aria-hidden="true">
+              <span class="java-window-dot java-dot-red"></span>
+              <span class="java-window-dot java-dot-yellow"></span>
+              <span class="java-window-dot java-dot-green"></span>
+            </div>
+            <span class="java-code-file">Main.java</span>
+            <span class="java-code-status"><span></span> Java</span>
+          </div>
+
+          <div class="java-code-body" aria-label="Example Java program">
+            <div><span class="java-ln">01</span><span class="java-kw">public class</span> <span class="java-type">Main</span> {</div>
+            <div><span class="java-ln">02</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="java-kw">public static void</span> <span class="java-fn">main</span>(String[] args) {</div>
+            <div><span class="java-ln">03</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class="java-string">"Hello, Java!"</span>);</div>
+            <div><span class="java-ln">04</span>&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+            <div><span class="java-ln">05</span>}</div>
+          </div>
+
+          <div class="java-code-footer">
+            <button type="button" class="java-run-btn" id="javaHeroRunBtn" aria-controls="javaHeroOutput" aria-expanded="false">
+              <span aria-hidden="true">▶</span> Run
+            </button>
+            <span class="java-code-hint">Java 26 • Main.java</span>
+          </div>
+
+          <div class="java-output" id="javaHeroOutput" hidden aria-live="polite">
+            <div class="java-output-heading"><span></span> Output</div>
+            <code>Hello, Java!</code>
+          </div>
+        </div>
+
+        <div class="java-floating-card java-floating-jdk" aria-hidden="true">
+          <strong>JDK</strong><span>Development Kit</span>
+        </div>
+        <div class="java-floating-card java-floating-oop" aria-hidden="true">
+          <strong>OOP</strong><span>Core Concepts</span>
+        </div>
+        <div class="java-floating-card java-floating-dsa" aria-hidden="true">
+          <strong>DSA</strong><span>Problem Solving</span>
+        </div>
+        <div class="java-floating-card java-floating-spring" aria-hidden="true">
+          <strong>Spring</strong><span>Backend</span>
+        </div>
+        <div class="java-floating-card java-floating-collections" aria-hidden="true">
+          <strong>Collections</strong><span>Java API</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MAIN LAYOUT: content + sidebar ===================== -->
+  <div class="container">
+    <div class="page-layout" style="padding: 56px 0;">
+      <div class="main-col">
+
+        <!-- WHAT IS JAVA -->
+        <section id="what-is-java" class="reveal">
+          <div class="section-head">
+            <div class="section-eyebrow-row"><span class="section-icon">☕</span><h2 class="section-title" data-i18n="section_what_is_java">What is Java?</h2></div>
+            <p class="section-sub">Java is a high-level, object-oriented, class-based programming language designed to be platform-independent through the Java Virtual Machine (JVM). It has powered enterprise software, Android apps and backend systems for nearly three decades.</p>
+          </div>
+          <div class="facts-grid">
+            <div class="fact-chip"><div class="fact-num">1995</div><div class="fact-label">Created</div></div>
+            <div class="fact-chip"><div class="fact-num">OOP</div><div class="fact-label">Object-Oriented</div></div>
+            <div class="fact-chip"><div class="fact-num">JVM</div><div class="fact-label">Platform Independent</div></div>
+            <div class="fact-chip"><div class="fact-num">Typed</div><div class="fact-label">Strongly Typed</div></div>
+            <div class="fact-chip"><div class="fact-num">GC</div><div class="fact-label">Auto Memory Management</div></div>
+            <div class="fact-chip"><div class="fact-num">9M+</div><div class="fact-label">Developers Worldwide</div></div>
+          </div>
+        </section>
+
+        <!-- WHY LEARN JAVA -->
+        <section id="why-learn" class="reveal">
+          <div class="section-head">
+            <div class="section-eyebrow-row"><span class="section-icon">💡</span><h2 class="section-title" data-i18n="section_why_learn">Why Learn Java?</h2></div>
+            <p class="section-sub">Java is one of the most popular and powerful programming languages in the world. Here's why it's worth learning.</p>
+          </div>
+          <div class="grid-3">
+            <div class="feature-card"><div class="feature-icon">📈</div><div class="feature-title">High Demand</div><div class="feature-desc">Used in enterprise applications, Android development, backend systems and more.</div></div>
+            <div class="feature-card"><div class="feature-icon">🧩</div><div class="feature-title">Object-Oriented</div><div class="feature-desc">Build modular and reusable applications with classes and objects.</div></div>
+            <div class="feature-card"><div class="feature-icon">🖥️</div><div class="feature-title">Platform Independent</div><div class="feature-desc">Write once and run anywhere through the JVM.</div></div>
+            <div class="feature-card"><div class="feature-icon">🌍</div><div class="feature-title">Strong Community</div><div class="feature-desc">A huge developer ecosystem and resources worldwide.</div></div>
+            <div class="feature-card"><div class="feature-icon">🚀</div><div class="feature-title">Career Growth</div><div class="feature-desc">Excellent opportunities in software development.</div></div>
+            <div class="feature-card"><div class="feature-icon">🏢</div><div class="feature-title">Enterprise Ready</div><div class="feature-desc">Widely used in large-scale, mission-critical applications.</div></div>
+            <div class="feature-card"><div class="feature-icon">🧰</div><div class="feature-title">Rich Ecosystem</div><div class="feature-desc">Spring, Spring Boot, Maven, Gradle, Hibernate and more.</div></div>
+            <div class="feature-card"><div class="feature-icon">🔒</div><div class="feature-title">Secure</div><div class="feature-desc">A strong type system and a mature security ecosystem.</div></div>
+            <div class="feature-card"><div class="feature-icon">⚡</div><div class="feature-title">Performance</div><div class="feature-desc">JIT compilation and JVM optimizations keep it fast.</div></div>
+            <div class="feature-card"><div class="feature-icon">🧭</div><div class="feature-title">Versatile</div><div class="feature-desc">Backend, desktop, enterprise, cloud and beyond.</div></div>
+          </div>
+        </section>
+
+        <!-- ROADMAP -->
+        <section id="roadmap" class="reveal">
+          <div class="section-head">
+            <div class="section-eyebrow-row"><span class="section-icon">🗺️</span><h2 class="section-title" data-i18n="section_roadmap">Java Learning Roadmap</h2></div>
+            <p class="section-sub">Follow this step-by-step path to become a Java expert. Tap a step to mark it complete — your progress is saved automatically.</p>
+          </div>
+          <div class="roadmap-scroll" id="roadmapScroll">
+            <!-- Steps injected are static here; each is clickable via script.js -->
+          </div>
+        </section>
+
+        <!-- PROGRAMS -->
+        <section id="programs" class="reveal">
+          <div class="section-head">
+            <div class="section-eyebrow-row"><span class="section-icon">&lt;/&gt;</span><h2 class="section-title" data-i18n="section_programs">50+ Java Programs</h2></div>
+            <p class="section-sub">Real, working Java programs with source code, expected output and explanations — from beginner basics to advanced topics.</p>
+          </div>
+          <div class="programs-toolbar">
+            <div class="filter-pills" id="programFilters">
+              <button class="pill active" data-filter="all">All</button>
+              <button class="pill" data-filter="beginner">Beginner</button>
+              <button class="pill" data-filter="intermediate">Intermediate</button>
+              <button class="pill" data-filter="advanced">Advanced</button>
+            </div>
+            <div class="search-box">
+              <span aria-hidden="true">🔍</span>
+              <input type="search" id="programSearch" placeholder="Search programs (calculator, array, OOP...)" aria-label="Search programs">
+            </div>
+          </div>
+          <div class="programs-grid" id="programsGrid" aria-live="polite"></div>
+          <div class="show-more-wrap"><button class="btn btn-ghost" id="showAllPrograms" data-i18n="btn_show_all">Show All Programs</button></div>
+        </section>
+
+        <!-- PRACTICE PROBLEMS -->
+        <section id="problems" class="reveal">
+          <div class="section-head">
+            <div class="section-eyebrow-row"><span class="section-icon">🎯</span><h2 class="section-title" data-i18n="section_practice">Java Practice Problems</h2></div>
+            <p class="section-sub">Curated problems with hints and full solutions. Mark problems solved to track your own progress.</p>
+          </div>
+          <div class="programs-toolbar">
+            <div class="filter-pills" id="practiceFilters">
+              <button class="pill active" data-filter="all">All</button>
+              <button class="pill" data-filter="easy">Easy</button>
+              <button class="pill" data-filter="medium">Medium</button>
+              <button class="pill" data-filter="hard">Hard</button>
+            </div>
+            <div class="search-box">
+              <span aria-hidden="true">🔍</span>
+              <input type="search" id="practiceSearch" placeholder="Search problems..." aria-label="Search practice problems">
+            </div>
+          </div>
+          <div class="practice-grid" id="practiceGrid" aria-live="polite"></div>
+        </section>
+
+        <!-- STUDY PLAN -->
+        <section id="study-plan" class="reveal">
+          <div class="section-head">
+            <div class="section-eyebrow-row"><span class="section-icon">📅</span><h2 class="section-title" data-i18n="section_study_plan">30-Day Java Study Plan</h2></div>
+            <p class="section-sub">A day-by-day path from your first line of Java to a finished capstone project. Check off each day as you complete it.</p>
+          </div>
+          <div class="plan-list" id="planList"></div>
+          <div class="plan-toolbar"><button class="btn btn-ghost btn-sm" id="showFullPlan" data-i18n="btn_show_full_plan">Show Full Study Plan</button></div>
+        </section>
+
+        <!-- INTERVIEW QUESTIONS -->
+        <section id="interview" class="reveal">
+          <div class="section-head">
+            <div class="section-eyebrow-row"><span class="section-icon">💼</span><h2 class="section-title" data-i18n="section_interview">Interview Questions</h2></div>
+            <p class="section-sub">Common Java interview questions across core topics, with clear, concise answers.</p>
+          </div>
+          <div class="interview-toolbar">
+            <div class="search-box" style="flex:1; min-width:200px;">
+              <span aria-hidden="true">🔍</span>
+              <input type="search" id="interviewSearch" placeholder="Search questions..." aria-label="Search interview questions">
+            </div>
+            <select class="lang-select" id="interviewCategory" aria-label="Filter by category" style="min-width:170px;">
+              <option value="all">All Categories</option>
+            </select>
+          </div>
+          <div id="interviewList"></div>
+        </section>
+
+        <!-- RESOURCES -->
+        <section id="resources" class="reveal">
+          <div class="section-head">
+            <div class="section-eyebrow-row"><span class="section-icon">📚</span><h2 class="section-title" data-i18n="section_resources">Java Resources</h2></div>
+            <p class="section-sub">Curated references to go deeper on each part of the Java ecosystem.</p>
+          </div>
+          <div class="grid-2">
+            <div class="resource-card"><strong>Java Basics</strong>
+              <ul><li>Official Java Language Specification docs</li><li>OpenJDK documentation</li><li>Java syntax &amp; keyword reference</li></ul>
+            </div>
+            <div class="resource-card"><strong>OOP</strong>
+              <ul><li>Design principles: SOLID</li><li>Effective Java (Joshua Bloch)</li><li>UML basics for class design</li></ul>
+            </div>
+            <div class="resource-card"><strong>Collections</strong>
+              <ul><li>Java Collections Framework guide</li><li>Choosing the right data structure</li><li>Big-O cheat sheet for collections</li></ul>
+            </div>
+            <div class="resource-card"><strong>JDBC</strong>
+              <ul><li>JDBC API reference</li><li>Connection pooling basics</li><li>Working with PreparedStatement safely</li></ul>
+            </div>
+            <div class="resource-card"><strong>Spring</strong>
+              <ul><li>Spring Framework reference docs</li><li>Dependency Injection deep dive</li><li>Spring community guides</li></ul>
+            </div>
+            <div class="resource-card"><strong>Spring Boot</strong>
+              <ul><li>Spring Boot reference documentation</li><li>Building your first REST API</li><li>Spring Initializr</li></ul>
+            </div>
+            <div class="resource-card"><strong>Algorithms</strong>
+              <ul><li>Sorting &amp; searching fundamentals</li><li>Recursion &amp; dynamic programming</li><li>Practice platforms for Java coding</li></ul>
+            </div>
+            <div class="resource-card"><strong>Data Structures</strong>
+              <ul><li>Stacks, queues &amp; linked lists</li><li>Trees &amp; graphs in Java</li><li>Implementing custom structures</li></ul>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ===================== SIDEBAR ===================== -->
+      <aside class="side-col" aria-label="Learning progress and quick links">
+
+        <div class="card java-learning-pulse" id="about" style="order: 99;">
+          <div class="java-pulse-heading">
+            <span class="fact-eyebrow">Java Learning Pulse</span>
+            <span class="java-pulse-live"><i aria-hidden="true"></i> Live</span>
+          </div>
+          <h3 style="font-size:1rem; margin:7px 0 5px;">Your 30-Day Journey</h3>
+          <p class="java-pulse-copy">Build momentum one day at a time. Your progress stays connected to the roadmap.</p>
+          <div class="progress-ring-wrap" style="margin-top:14px;">
+            <div class="progress-ring">
+              <svg viewBox="0 0 100 100" width="92" height="92">
+                <circle class="progress-ring-track" cx="50" cy="50" r="40" stroke-width="9" fill="none"/>
+                <circle id="progressRingFill" class="progress-ring-fill" cx="50" cy="50" r="40" stroke-width="9" fill="none"
+                        stroke-dasharray="251" stroke-dashoffset="251"/>
+              </svg>
+              <div class="progress-ring-text" id="progressRingText">0%</div>
+            </div>
+            <div class="progress-stats">
+              <div><b id="statDaysCompleted">0 / 30</b><span>Days Completed</span></div>
+              <div><b id="statModulesCompleted">0 / 27</b><span>Modules Completed</span></div>
+            </div>
+          </div>
+          <a href="#study-plan" class="btn btn-primary btn-block btn-sm" style="margin-top:14px;">Continue Learning →</a>
+        </div>
+
+        <div class="card java-insight-card">
+          <div class="java-insight-icon" aria-hidden="true">J</div>
+          <div class="java-insight-body">
+            <span class="fact-eyebrow" data-i18n="section_fun_fact">Java Insight</span>
+            <p class="fact-quote java-insight-quote"><span id="funFactText"></span></p>
+          </div>
+          <button class="btn btn-ghost btn-sm btn-block" id="funFactBtn" data-i18n="btn_another_fact">Another Insight</button>
+        </div>
+
+        <div class="card java-magic-card">
+          <div class="java-magic-top">
+            <span class="fact-eyebrow" data-i18n="section_magic_trick">☕ Java Magic Trick</span>
+            <span class="java-magic-spark" aria-hidden="true">✦</span>
+          </div>
+          <p class="fact-quote">Did you know?<br><span id="magicTrickText"></span></p>
+          <button class="btn btn-ghost btn-sm btn-block" id="magicTrickBtn" data-i18n="btn_another_fact">Show Another Fact</button>
+        </div>
+
+        <div class="card">
+          <h3 style="font-size:0.95rem;" data-i18n="footer_quick_links">Quick Links</h3>
+          <div class="quick-links-grid">
+            <a class="quick-link-item" href="#home">🏠<span>Home</span></a>
+            <a class="quick-link-item" href="#programs">📘<span>Programs</span></a>
+            <a class="quick-link-item" href="#problems">🎯<span>Problems</span></a>
+            <a class="quick-link-item" href="#interview">💼<span>Interview</span></a>
+            <a class="quick-link-item" href="#resources">📚<span>Resources</span></a>
+            <a class="quick-link-item" href="#about-creator">👤<span>About</span></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="font-size:0.95rem;">Latest Updates</h3>
+          <div class="update-item"><span class="update-dot"></span><div><div class="update-text">New 10 Java projects added (Total 50+)</div><div class="update-date">Sep 8, 2026</div></div></div>
+          <div class="update-item"><span class="update-dot"></span><div><div class="update-text">Interview questions updated</div><div class="update-date">Sep 6, 2026</div></div></div>
+          <div class="update-item"><span class="update-dot"></span><div><div class="update-text">Spring Boot section added</div><div class="update-date">Sep 4, 2026</div></div></div>
+        </div>
+
+        <div class="card" id="about-creator">
+          <h3 style="font-size:0.95rem; margin-bottom:12px;" data-i18n="section_about">About the Creator</h3>
+          <div class="about-creator">
+            <svg class="avatar java-avatar" viewBox="0 0 120 120" role="img" aria-label="Cartoon illustration of Priyajit Paul, male Java developer">
+              <defs>
+                <linearGradient id="avatarBgNew" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#173f2d"/>
+                  <stop offset="0.55" stop-color="#0b2519"/>
+                  <stop offset="1" stop-color="#06130d"/>
+                </linearGradient>
+                <linearGradient id="avatarSkinNew" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#e4ad78"/>
+                  <stop offset="1" stop-color="#b96f43"/>
+                </linearGradient>
+                <linearGradient id="avatarJacketNew" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#1fb968"/>
+                  <stop offset="1" stop-color="#08733e"/>
+                </linearGradient>
+                <linearGradient id="avatarShirtNew" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#f4fff8"/>
+                  <stop offset="1" stop-color="#cdebd9"/>
+                </linearGradient>
+              </defs>
+              <circle cx="60" cy="60" r="57" fill="url(#avatarBgNew)" stroke="#42e987" stroke-opacity=".4" stroke-width="2.5"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#6ceba2" stroke-opacity=".08" stroke-width="1"/>
+              <path d="M21 111c3-25 18-39 39-39s36 14 39 39" fill="url(#avatarJacketNew)"/>
+              <path d="M43 77h34v18c-7 6-27 6-34 0z" fill="url(#avatarSkinNew)"/>
+              <path d="M42 82l18 17 18-17v28H42z" fill="url(#avatarShirtNew)"/>
+              <path d="M52 94l8 7 8-7-4 15h-8z" fill="#0d6d3b"/>
+              <ellipse cx="60" cy="55" rx="24" ry="29" fill="url(#avatarSkinNew)"/>
+              <path d="M36 52c-1-23 10-35 27-35 16 0 26 11 27 30-8-6-17-10-27-10-10 0-19 4-27 15z" fill="#121917"/>
+              <path d="M39 38c5-14 15-20 27-20 9 0 17 4 22 12-8-5-16-7-24-6-10 1-17 6-25 14z" fill="#202a25"/>
+              <path d="M39 49c5-3 10-3 15-1M66 48c5-2 10-2 15 1" fill="none" stroke="#20251f" stroke-width="2.5" stroke-linecap="round"/>
+              <ellipse cx="50" cy="56" rx="2.2" ry="2.6" fill="#102018"/>
+              <ellipse cx="70" cy="56" rx="2.2" ry="2.6" fill="#102018"/>
+              <circle cx="49.5" cy="55.5" r=".65" fill="#fff"/>
+              <circle cx="69.5" cy="55.5" r=".65" fill="#fff"/>
+              <path d="M57 65c2 1.4 4 1.4 6 0" fill="none" stroke="#8a4d32" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M49 72c7 4 15 4 22 0" fill="none" stroke="#8d4d35" stroke-width="1.7" stroke-linecap="round"/>
+              <path d="M35 104c8-8 17-12 25-12s17 4 25 12" fill="none" stroke="#07552f" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="94" cy="91" r="9" fill="#102f20" stroke="#42e987" stroke-opacity=".25"/>
+              <text x="94" y="95" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="800" fill="#6df0a2">J</text>
+            </svg>
+            <div class="about-text">
+              <div class="about-name">Hi, I'm Priyajit Paul</div>
+              I am the creator of Code with Java. I love coding, building useful projects and helping others learn. Let's grow together!
+            </div>
+          </div>
+          <button class="btn btn-ghost btn-sm btn-block" style="margin-top:12px;" data-i18n="btn_know_more">Know More →</button>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#home" class="brand">
+          <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
+            <polygon points="32,3 58,17.5 58,46.5 32,61 6,46.5 6,17.5" fill="#0a271b" stroke="#34e07a" stroke-width="2"/>
+            <path d="M25 20c-2-2-2-4 0-6" fill="none" stroke="#a6e14c" stroke-width="2" stroke-linecap="round"/>
+            <path d="M32 20c-2-2-2-4 0-6" fill="none" stroke="#a6e14c" stroke-width="2" stroke-linecap="round"/>
+            <path d="M39 20c-2-2-2-4 0-6" fill="none" stroke="#a6e14c" stroke-width="2" stroke-linecap="round"/>
+            <rect x="19" y="25" width="22" height="4" rx="2" fill="#eefaf2"/>
+            <path d="M20,29 L40,29 L40,39 Q40,47 30,47 Q20,47 20,39 Z" fill="#eefaf2"/>
+            <path d="M40,33 C46,32 49,35 49,38.5 C49,42 46,44.5 40,43.5" fill="none" stroke="#eefaf2" stroke-width="2.6" stroke-linecap="round"/>
+            <rect x="22" y="30.5" width="16" height="2.6" rx="1.3" fill="#0a271b"/>
+          </svg>
+          <span class="brand-text">
+            <span class="brand-name">CODE WITH <span class="accent">JAVA</span></span>
+          </span>
+        </a>
+        <p class="footer-brand-desc" data-i18n="footer_tagline">Learn • Practice • Build • Grow</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title" data-i18n="footer_learning">Learning</div>
+        <a href="#roadmap">Java Basics</a>
+        <a href="#why-learn">OOP</a>
+        <a href="#resources">Collections</a>
+        <a href="#roadmap">Advanced Java</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title" data-i18n="footer_projects">Projects</div>
+        <a href="#programs">Beginner Projects</a>
+        <a href="#programs">Intermediate Projects</a>
+        <a href="#programs">Advanced Projects</a>
+        <a href="#programs">All Projects</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title" data-i18n="footer_quick_links">Quick Links</div>
+        <a href="#home">Home</a>
+        <a href="#programs">Programs</a>
+        <a href="#problems">Problems</a>
+        <a href="#about-creator">About</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title" data-i18n="footer_connect">Connect</div>
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#about-creator">Portfolio</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="footerYear">2026</span> Code with Java — <span data-i18n="footer_bottom">Keep coding, keep growing!</span></span>
+      <a href="#home" class="back-to-top" id="backToTop">↑ Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== PROGRAM DETAIL MODAL ===================== -->
+<div class="modal-overlay" id="programModal">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Program details" id="programModalBody"></div>
+</div>
+
+<!-- ===================== PRACTICE MODAL ===================== -->
+<div class="modal-overlay" id="practiceModal">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Practice problem details" id="practiceModalBody"></div>
+</div>
+
+<script>
+  // Render the roadmap steps first (data is small and static, kept inline for
+  // simplicity) so script.js can find and wire up the .roadmap-step elements.
+  (function () {
+    const roadmapItems = [
+      "Basics","Variables","Data Types","Operators","Input/Output","Conditionals","Loops",
+      "Methods","Arrays","Strings","OOP","Inheritance","Polymorphism","Abstraction","Interfaces",
+      "Exception Handling","Collections","Generics","File Handling","Multithreading","JDBC",
+      "Java 8+","Streams","Lambda Expressions","Spring","Spring Boot","Advanced Java"
+    ];
+    const scroll = document.getElementById("roadmapScroll");
+    scroll.innerHTML = roadmapItems.map((label, i) => `
+      <div class="roadmap-step" data-step="${i + 1}" role="button" tabindex="0" aria-label="Mark ${label} complete">
+        <div class="roadmap-num">${String(i + 1).padStart(2, "0")}</div>
+        <div class="roadmap-label">${label}</div>
+      </div>
+    `).join("");
+  })();
+</script>
+<script src="./js/script.js"></script>
+<script src="./js/programs.js"></script>
+<script src="./js/study-plan.js"></script>
+<script src="./js/practice.js"></script>
+<script src="./js/interview.js"></script>
+<script src="./js/language.js"></script>
+</body>
+</html>

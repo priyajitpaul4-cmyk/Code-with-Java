@@ -1,0 +1,29 @@
+# Problem 3: Second Largest in an Array
+
+**Difficulty:** Medium | **Topic:** Arrays
+
+## Statement
+Find the second largest element in an array without sorting it.
+
+## Hint
+Track both the largest and second largest as you scan the array once.
+
+## Solution
+```java
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {12, 35, 1, 10, 34, 1};
+        int first = Integer.MIN_VALUE, second = Integer.MIN_VALUE;
+        for (int n : arr) {
+            if (n > first) { second = first; first = n; }
+            else if (n > second && n != first) { second = n; }
+        }
+        System.out.println("Second largest: " + second);
+    }
+}
+```
+
+## Expected Output
+```
+Second largest: 34
+```

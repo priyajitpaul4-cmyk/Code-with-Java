@@ -1,0 +1,2 @@
+Java is platform independent.
+Streams simplify collection processing.

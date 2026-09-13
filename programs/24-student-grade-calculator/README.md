@@ -1,0 +1,45 @@
+# 24. Student Grade Calculator
+
+**Difficulty:** Beginner | **Category:** OOP
+
+## Description
+Calculates a student's average marks and assigns a letter grade.
+
+## Source Code
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of subjects: ");
+        int n = sc.nextInt();
+        int total = 0;
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter marks for subject " + (i + 1) + ": ");
+            total += sc.nextInt();
+        }
+        double average = (double) total / n;
+        char grade;
+        if (average >= 90) grade = 'A';
+        else if (average >= 75) grade = 'B';
+        else if (average >= 60) grade = 'C';
+        else if (average >= 40) grade = 'D';
+        else grade = 'F';
+        System.out.printf("Average: %.2f, Grade: %c%n", average, grade);
+    }
+}
+```
+
+## Expected Output
+```
+Enter number of subjects: 3
+...
+Average: 82.33, Grade: B
+```
+
+## Explanation
+Marks for each subject are summed and divided by the count to get the average, which is then mapped to a letter grade.
+
+---
+Part of [Code with Java](../../README.md) — 50+ Java Programs collection.
